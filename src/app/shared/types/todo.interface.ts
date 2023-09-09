@@ -1,4 +1,5 @@
-export interface Todo {
+import { ErrorsInterface } from './error.interface';
+export interface TodoInterface {
   id: number;
   title: string;
   description: string;
@@ -6,7 +7,8 @@ export interface Todo {
   state: 'done' | 'ongoing' | 'done' | null;
 }
 
-export interface TodoListState {
-  items: Todo[];
-  isLoading: boolean;
+export interface TodoListStateInterface {
+  todos: TodoInterface[];
+  isLoading: boolean | null;
+  validationErrors: ErrorsInterface | null;
 }

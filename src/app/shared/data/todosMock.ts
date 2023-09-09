@@ -20,11 +20,4 @@ export const todosMock = [
     inCharge: 'Olivier',
     state: null,
   },
-  {
-    id: 4,
-    title: 'Create todos',
-    description: 'Lorem1',
-    inCharge: 'Jean',
-    state: null,
-  },
 ];
