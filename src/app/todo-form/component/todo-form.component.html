@@ -1,17 +1,26 @@
-<form class="container d-flex flex-column align-items-center mb-5">
+<form
+  class="container d-flex flex-column align-items-center mb-5"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+>
   <mat-form-field class="example-full-width">
     <mat-label>Titre</mat-label>
-    <input matInput name="titre" required />
+    <input matInput name="titre" required formControlName="title" />
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Description</mat-label>
-    <input matInput name="description" required />
+    <input matInput name="description" required formControlName="description" />
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Responsable</mat-label>
-    <input matInput name="responsable" required />
+    <input
+      matInput
+      name="responsable"
+      required
+      formControlName="personInCharge"
+    />
   </mat-form-field>
 
   <button mat-button type="submit" class="btn btn-primary">Ajouter</button>

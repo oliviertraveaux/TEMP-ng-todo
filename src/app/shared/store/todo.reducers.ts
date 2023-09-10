@@ -26,6 +26,20 @@ const todoFeature = createFeature({
       ...state,
       error: action.errors,
       isLoading: false,
+    })),
+    on(todoActions.addTodo, (state) => ({
+      ...state,
+    })),
+    on(todoActions.addTodoSuccess, (state, action) => ({
+      ...state,
+      todos: [action.request.todo, ...state.todos],
+    })),
+    on(todoActions.deleteTodo, (state) => ({
+      ...state,
+    })),
+    on(todoActions.deleteTodoSuccess, (state, action) => ({
+      ...state,
+      todos: action.todos,
     }))
   ),
 });
